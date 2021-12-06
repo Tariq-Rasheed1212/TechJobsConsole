@@ -71,10 +71,12 @@ namespace TechJobsConsole
                 foreach (string info in row.Values)
                     {
                     //info.ToLower()
-                    if (info.ToLower().Contains(value.ToLower())) ; 
+                    if (info.ToLower().Contains(value.ToLower()))
                         {
+                        if (!results.Contains(row)) { 
                         results.Add(row);
                         }
+                        } 
                     }
                 }
             return results;
