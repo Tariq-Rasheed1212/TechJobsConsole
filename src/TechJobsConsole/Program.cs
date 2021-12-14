@@ -70,6 +70,8 @@ namespace TechJobsConsole
                         { //added "All Available to jobData.FindColumnAndValue
 
                         searchResults = JobData.FindByColumnAndValue(columnChoice, searchTerm);
+                        Console.WriteLine(columnChoice);
+                        Console.WriteLine(searchTerm);
                         PrintJobs(searchResults);
                         }
                     }
@@ -98,9 +100,9 @@ namespace TechJobsConsole
                 Console.WriteLine("\n" + choiceHeader + " by:");
 
                 for (int j = 0; j < choiceKeys.Length; j++)
-                    {
+                {
                     Console.WriteLine(j + " - " + choices[choiceKeys[j]]);
-                    }
+                }
 
                 string input = Console.ReadLine();
                 choiceIdx = int.Parse(input);
